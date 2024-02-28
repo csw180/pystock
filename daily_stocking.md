@@ -35,3 +35,23 @@ CREATE TABLE IF NOT EXISTS daily_price (
     chg   DECIMAL(20,5),
     PRIMARY KEY (code, date))
 ```
+#### daily_agent create script
+
+```
+CREATE TABLE IF NOT EXISTS daily_agent (
+    code VARCHAR(20),
+    date VARCHAR(8),
+    kt BIGINT(20),                    -- 금융투자
+    bh BIGINT(20),                    -- 보험
+    ts BIGINT(20),                    -- 투신
+    sm BIGINT(20),                    -- 사모
+    bk BIGINT(20),                    -- 은행
+    ek BIGINT(20),                    -- 기타금융
+    yk BIGINT(20),                    -- 연기금등
+    eb BIGINT(20),                    -- 기타법인
+    pe BIGINT(20),                    -- 개인
+    fr BIGINT(20),                    -- 외국인
+    ef BIGINT(20),                    -- 기타외국인
+    tot BIGINT(20),                   -- 전체
+    PRIMARY KEY (code, date))
+```
